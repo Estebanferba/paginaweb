@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #ffffff;
+  background-color: #0d1117;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #161b22;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #58a6ff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #c9d1d9;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #58a6ff;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  text-align: center;
+  background: linear-gradient(180deg, #0d1117, #161b22);
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  background-color: #238636;
+  color: #fff;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #2ea043;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+}
+/* ------ FUNCIONES (ajustado proporción 1:1) ------ */
+.funciones-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.funcion-item {
+  background: #fff;
+  border-radius: 12px;
+  /* ancho fijo o máximo ancho */
+  width: 220px;
+  /* obligamos la proporción 1:1 */
+  aspect-ratio: 1 / 1;
+  /* centra el contenido vertical y horizontalmente */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.funcion-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+.funcion-item img {
+  /* ajusta el tamaño de tus iconos */
+  width: 80px;
+  height: 80px;
+}
+
+.funcion-item p {
+  font-family: sans-serif;
+  font-size: 14px;
+  color: #1a237e;
+  transition: color 0.3s;
+}
+.funcion-item p {
+  font-family: sans-serif;
+  font-size: 14px;
+  color: #000000;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+.funcion-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.funcion-item img {
+  width: 80px;
+  height: 80px;
+  transition: opacity 0.4s ease;
+}
+
+.funcion-item p {
+  font-family: sans-serif;
+  font-size: 14px;
+  color: #000000;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+/* Al hacer hover ocultamos la imagen y hacemos crecer el texto */
+.funcion-item:hover img {
+  opacity: 0;
+}
+
+.funcion-item:hover p {
+  font-size: 16px;
+  padding: 20px;
+  opacity: 1;
+  color: #1a237e;
+}
